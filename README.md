@@ -1,1 +1,1 @@
-# yii2-gii-abstract-model
+# yii2-gii
