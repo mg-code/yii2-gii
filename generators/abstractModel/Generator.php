@@ -83,7 +83,7 @@ class Generator extends \yii\gii\generators\model\Generator
                     Yii::getAlias('@' . str_replace('\\', '/', $this->ns)) . '/' . $modelClassName . '.php', $this->render('model.php', $params)
             );
             $files[] = new CodeFile(
-                    Yii::getAlias('@' . str_replace('\\', '/', $this->ns)) . '/base/' . $modelClassName . 'Base.php', $this->render('abstractModel.php', $params)
+                    Yii::getAlias('@' . str_replace('\\', '/', $this->ns)) . '/Abstract' . $modelClassName . '.php', $this->render('abstractModel.php', $params)
             );
             // query :
             if ($queryClassName) {

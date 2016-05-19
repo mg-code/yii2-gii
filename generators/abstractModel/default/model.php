@@ -22,7 +22,7 @@ namespace <?= $generator->ns ?>;
 }
 ?>
  */
-class <?= $className ?> extends <?= '\\'.$generator->ns.'\\base\\'.$className.'Base' . "\n" ?>
+class <?= $className ?> extends <?= 'Abstract'.$className. "\n" ?>
 {
 <?php if($generator->relationsInMain): ?>
 <?php foreach ($relations as $name => $relation): ?>

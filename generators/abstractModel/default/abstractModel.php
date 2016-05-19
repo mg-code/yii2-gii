@@ -18,16 +18,9 @@ use yii\helpers\ArrayHelper;
 echo "<?php\n";
 ?>
 
-namespace <?= $generator->ns ?>\base;
+namespace <?= $generator->ns ?>;
 
 use Yii;
-<?php
-$relationClasses = ArrayHelper::getColumn($relations, '1');
-$relationClasses = array_unique(array_values($relationClasses));
-foreach($relationClasses as $relationClass) {
-    echo "use {$generator->ns}\\{$relationClass};\n";
-}
-?>
 
 /**
  * This is the model class for table "<?= $generator->generateTableName($tableName) ?>".
@@ -48,7 +41,7 @@ foreach($relationClasses as $relationClass) {
 }
 ?>
  */
-abstract class <?= $className ?>Base extends <?= '\\' . ltrim($generator->baseClass, '\\') . "\n" ?>
+abstract class Abstract<?= $className ?> extends <?= '\\' . ltrim($generator->baseClass, '\\') . "\n" ?>
 {
     /** @inheritdoc */
     public static function tableName()
