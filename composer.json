@@ -1,6 +1,6 @@
 {
     "name": "mg-code/yii2-gii",
-    "description": "Abstract model generator for Yii2 Gii Extension",
+    "description": "Abstract model generator for Yii2 Gii code generator.",
     "keywords": ["yii", "yii2", "extension", "gii", "base", "abstract", "model", "generator"],
     "homepage": "https://github.com/mg-code/yii2-gii",
     "type": "yii2-extension",
