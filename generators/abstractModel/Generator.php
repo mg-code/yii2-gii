@@ -13,7 +13,7 @@ class Generator extends \yii\gii\generators\model\Generator
 {
     /** @var int Whether to save relations in main model */
     public $relationsInMain = 0;
-    
+
     /** @inheritdoc */
     public function getName()
     {
@@ -25,7 +25,6 @@ class Generator extends \yii\gii\generators\model\Generator
     {
         return 'This generator generates main and abstract ActiveRecord classes for the specified database table.';
     }
-
 
     /**
      * @inheritdoc
@@ -75,6 +74,7 @@ class Generator extends \yii\gii\generators\model\Generator
                 'className' => $modelClassName,
                 'queryClassName' => $queryClassName,
                 'tableSchema' => $tableSchema,
+                'properties' => $this->generateProperties($tableSchema),
                 'labels' => $this->generateLabels($tableSchema),
                 'rules' => $this->generateRules($tableSchema),
                 'relations' => isset($relations[$tableName]) ? $relations[$tableName] : [],
