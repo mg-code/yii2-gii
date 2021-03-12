@@ -25,8 +25,8 @@ use Yii;
 /**
  * This is the model class for table "<?= $generator->generateTableName($tableName) ?>".
  *
-<?php foreach ($tableSchema->columns as $column): ?>
- * @property <?= "{$column->phpType} \${$column->name}\n" ?>
+<?php foreach ($properties as $property => $data): ?>
+ * @property <?= "{$data['type']} \${$property}"  . ($data['comment'] ? ' ' . strtr($data['comment'], ["\n" => ' ']) : '') . "\n" ?>
 <?php endforeach; ?>
 <?php if (!empty($relations) && !$generator->relationsInMain){
     echo " *\n";
